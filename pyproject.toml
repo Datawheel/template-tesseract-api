@@ -1,27 +1,27 @@
-[tool.poetry]
-name = "tesseract-olap-demo"
-version = "0.4.0"
+[project]
+name = "tesseract-app"
+version = "0.1.0"
 description = ""
-authors = [
-  "Francisco Abarzua <francisco@datawheel.us>",
-  "Samuel Osorio <samuel@datawheel.us>",
+requires-python = ">=3.10"
+dependencies = [
+  "granian>=1.6.0",
+  "logiclayer-complexity>=0.5.5",
+  "logiclayer>=0.4.0",
+  "tesseract-olap[clickhouse,redis]>=0.10.3",
 ]
-license = "MIT"
-packages = [{include = "app"}]
+authors = [
+  {name = "Francisco Abarzua", email = "francisco@datawheel.us"},
+  {name = "Samuel Osorio", email = "samuel@datawheel.us"},
+]
 
-[tool.poetry.dependencies]
-python = "^3.8"
-granian = "^1.4.0"
-logiclayer = "^0.4.0"
-logiclayer-complexity = "^0.5.4"
-tesseract-olap = {extras = ["clickhouse", "redis"], version = "^0.9.9"}
-pandas = "^1.5.3"
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+pythonVersion = "3.10"
 
-[tool.poetry.group.dev.dependencies]
-granian = {extras = ["reload"], version = "^1.4.0"}
-python-dotenv = {extras = ["cli"], version = "^1.0.1"}
-ruff = "^0.4.8"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.uv]
+dev-dependencies = [
+  "granian[reload]>=1.6.0",
+  "python-dotenv[cli]>=1.0.1",
+  "pytest>=8.3.3",
+]

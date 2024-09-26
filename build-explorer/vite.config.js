@@ -6,7 +6,7 @@ const serverUrl = `/tesseract/`;
 const config = {
   base: "",
   build: {
-    outDir: "../explorer/",
+    outDir: "../static/",
     minify: "terser",
     rollupOptions: {
       output: {
