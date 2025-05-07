@@ -1,0 +1,983 @@
+2024-09-13 15:48:35,634 tesseract_olap.server - DEBUG:Looking for schemas in local directory: /Users/francisco/datawheel/template-tesseract-api/schema
+2024-09-13 15:48:35,634 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/national_exports.xml
+2024-09-13 15:48:35,635 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:48:35,635 tesseract_olap.schema.xml - DEBUG:Parsing node <Cube name='National Exports' />
+2024-09-13 15:48:35,635 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='national_exports' />
+2024-09-13 15:48:35,635 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Year' />
+2024-09-13 15:48:35,635 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Year' />
+2024-09-13 15:48:35,635 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Year' />
+2024-09-13 15:48:35,635 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Exporter' />
+2024-09-13 15:48:35,635 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Country' />
+2024-09-13 15:48:35,635 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Continent' />
+2024-09-13 15:48:35,635 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Exporter' />
+2024-09-13 15:48:35,635 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_country' />
+2024-09-13 15:48:35,635 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Product' />
+2024-09-13 15:48:35,635 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='HS4' />
+2024-09-13 15:48:35,635 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Section' />
+2024-09-13 15:48:35,635 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='HS2' />
+2024-09-13 15:48:35,635 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='HS4' />
+2024-09-13 15:48:35,636 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_hs4' />
+2024-09-13 15:48:35,636 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='With Oil' />
+2024-09-13 15:48:35,636 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='With Oil' />
+2024-09-13 15:48:35,636 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='With Oil' />
+2024-09-13 15:48:35,636 tesseract_olap.schema.xml - DEBUG:Parsing node <InlineTable name='oil_table' />
+2024-09-13 15:48:35,636 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Trade Values' />
+2024-09-13 15:48:35,636 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/acs_ygl_language_spoken_at_home_by_english_ability_2016_1.xml
+2024-09-13 15:48:35,636 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:48:35,636 tesseract_olap.schema.xml - DEBUG:Parsing node <Cube name='ACS Lang spoken at home' />
+2024-09-13 15:48:35,636 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='acs_ygl_language_spoken_at_home_by_english_ability_2016_1' />
+2024-09-13 15:48:35,637 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Geography' />
+2024-09-13 15:48:35,637 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Nation' />
+2024-09-13 15:48:35,637 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Nation' />
+2024-09-13 15:48:35,637 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='shapes2017_us' />
+2024-09-13 15:48:35,637 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Place' />
+2024-09-13 15:48:35,637 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='State Place' />
+2024-09-13 15:48:35,637 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Place' />
+2024-09-13 15:48:35,637 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Area Place' />
+2024-09-13 15:48:35,637 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='shapes2017_places' />
+2024-09-13 15:48:35,637 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='County' />
+2024-09-13 15:48:35,637 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='State County' />
+2024-09-13 15:48:35,637 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='County' />
+2024-09-13 15:48:35,637 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Area County' />
+2024-09-13 15:48:35,637 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='shapes2017_counties' />
+2024-09-13 15:48:35,638 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='State' />
+2024-09-13 15:48:35,638 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='State' />
+2024-09-13 15:48:35,638 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Area State' />
+2024-09-13 15:48:35,638 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='shapes2017_states' />
+2024-09-13 15:48:35,638 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='MSA' />
+2024-09-13 15:48:35,638 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='MSA' />
+2024-09-13 15:48:35,638 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Area MSA' />
+2024-09-13 15:48:35,638 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='shapes2017_msas' />
+2024-09-13 15:48:35,638 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='PUMA' />
+2024-09-13 15:48:35,638 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='State Puma' />
+2024-09-13 15:48:35,638 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='PUMA' />
+2024-09-13 15:48:35,638 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Area Puma' />
+2024-09-13 15:48:35,638 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='shapes2017_pumas' />
+2024-09-13 15:48:35,638 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Year' />
+2024-09-13 15:48:35,638 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Year' />
+2024-09-13 15:48:35,638 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Year' />
+2024-09-13 15:48:35,639 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Language Spoken at Home' />
+2024-09-13 15:48:35,639 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Language Spoken at Home' />
+2024-09-13 15:48:35,639 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Language Spoken at Home' />
+2024-09-13 15:48:35,639 tesseract_olap.schema.xml - DEBUG:Parsing node <InlineTable name='dim_0_table' />
+2024-09-13 15:48:35,639 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='English Ability' />
+2024-09-13 15:48:35,639 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='English Ability' />
+2024-09-13 15:48:35,639 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='English Ability' />
+2024-09-13 15:48:35,639 tesseract_olap.schema.xml - DEBUG:Parsing node <InlineTable name='dim_1_table' />
+2024-09-13 15:48:35,640 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Languages Spoken' />
+2024-09-13 15:48:35,640 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/trade_i_baci_a_96.xml
+2024-09-13 15:48:35,640 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:48:35,640 tesseract_olap.schema.xml - DEBUG:Parsing node <Cube name='trade_i_baci_a_96' />
+2024-09-13 15:48:35,640 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='trade_i_baci_a_96' />
+2024-09-13 15:48:35,640 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='HS Product' />
+2024-09-13 15:48:35,640 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='Unit' />
+2024-09-13 15:48:35,640 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='Exporter' />
+2024-09-13 15:48:35,640 tesseract_olap.schema.xml - DEBUG:Parsing node <HierarchyUsage name='Exporter' />
+2024-09-13 15:48:35,640 tesseract_olap.schema.xml - DEBUG:Parsing node <LevelUsage name='Exporter Continent' />
+2024-09-13 15:48:35,640 tesseract_olap.schema.xml - DEBUG:Parsing node <LevelUsage name='Exporter Country' />
+2024-09-13 15:48:35,640 tesseract_olap.schema.xml - DEBUG:Parsing node <PropertyUsage name='Exporter ISO 2' />
+2024-09-13 15:48:35,641 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='Importer' />
+2024-09-13 15:48:35,641 tesseract_olap.schema.xml - DEBUG:Parsing node <HierarchyUsage name='Importer' />
+2024-09-13 15:48:35,641 tesseract_olap.schema.xml - DEBUG:Parsing node <LevelUsage name='Importer Continent' />
+2024-09-13 15:48:35,641 tesseract_olap.schema.xml - DEBUG:Parsing node <LevelUsage name='Importer Country' />
+2024-09-13 15:48:35,641 tesseract_olap.schema.xml - DEBUG:Parsing node <PropertyUsage name='Importer ISO 2' />
+2024-09-13 15:48:35,642 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Year' />
+2024-09-13 15:48:35,642 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Year' />
+2024-09-13 15:48:35,642 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Year' />
+2024-09-13 15:48:35,642 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Trade Value' />
+2024-09-13 15:48:35,642 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Quantity' />
+2024-09-13 15:48:35,642 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/dim_shared_geography.xml
+2024-09-13 15:48:35,642 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:48:35,642 tesseract_olap.schema.xml - DEBUG:Parsing node <SharedDimension name='Geography' />
+2024-09-13 15:48:35,642 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Geography' />
+2024-09-13 15:48:35,642 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Continent' />
+2024-09-13 15:48:35,642 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Country' />
+2024-09-13 15:48:35,642 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='ISO 2' />
+2024-09-13 15:48:35,642 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='ISO 3' />
+2024-09-13 15:48:35,642 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_shared_countries' />
+2024-09-13 15:48:35,643 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/dim_shared_subnational_hs6.xml
+2024-09-13 15:48:35,643 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:48:35,643 tesseract_olap.schema.xml - DEBUG:Parsing node <SharedDimension name='Subnational HS6 Product' />
+2024-09-13 15:48:35,643 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Product' />
+2024-09-13 15:48:35,643 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Section' />
+2024-09-13 15:48:35,643 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Section' />
+2024-09-13 15:48:35,643 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Section ES' />
+2024-09-13 15:48:35,643 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='HS2' />
+2024-09-13 15:48:35,643 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='HS2' />
+2024-09-13 15:48:35,643 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='HS2 ES' />
+2024-09-13 15:48:35,643 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='HS4' />
+2024-09-13 15:48:35,643 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='HS4' />
+2024-09-13 15:48:35,643 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='HS4 ES' />
+2024-09-13 15:48:35,643 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Product' />
+2024-09-13 15:48:35,643 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='HS6' />
+2024-09-13 15:48:35,643 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Product ES' />
+2024-09-13 15:48:35,644 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_shared_master_hs6' />
+2024-09-13 15:48:35,644 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/dim_shared_units.xml
+2024-09-13 15:48:35,644 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:48:35,644 tesseract_olap.schema.xml - DEBUG:Parsing node <SharedDimension name='Shared Units' />
+2024-09-13 15:48:35,644 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Unit' />
+2024-09-13 15:48:35,644 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Unit' />
+2024-09-13 15:48:35,644 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Unit Abbreviation' />
+2024-09-13 15:48:35,644 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_shared_unit' />
+2024-09-13 15:48:35,644 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/dim_shared_trade_flow.xml
+2024-09-13 15:48:35,644 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:48:35,644 tesseract_olap.schema.xml - DEBUG:Parsing node <SharedDimension name='Trade Flow' />
+2024-09-13 15:48:35,644 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Trade Flow' />
+2024-09-13 15:48:35,644 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Trade Flow' />
+2024-09-13 15:48:35,644 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_shared_trade_flow' />
+2024-09-13 15:48:35,644 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/dim_shared_hs6.xml
+2024-09-13 15:48:35,645 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:48:35,645 tesseract_olap.schema.xml - DEBUG:Parsing node <SharedDimension name='HS96' />
+2024-09-13 15:48:35,645 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='HS96' />
+2024-09-13 15:48:35,645 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Section' />
+2024-09-13 15:48:35,645 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Section' />
+2024-09-13 15:48:35,645 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='HS2' />
+2024-09-13 15:48:35,645 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='HS2' />
+2024-09-13 15:48:35,645 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='HS4' />
+2024-09-13 15:48:35,645 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='HS4' />
+2024-09-13 15:48:35,645 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='HS6' />
+2024-09-13 15:48:35,645 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='HS6' />
+2024-09-13 15:48:35,645 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_shared_hs96' />
+2024-09-13 15:48:35,645 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/trade_s_chl_m_hs.xml
+2024-09-13 15:48:35,645 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:48:35,645 tesseract_olap.schema.xml - DEBUG:Parsing node <Cube name='trade_s_chl_m_hs' />
+2024-09-13 15:48:35,645 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='trade_s_chl_m_hs' />
+2024-09-13 15:48:35,645 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='Partner' />
+2024-09-13 15:48:35,645 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='Trade Flow' />
+2024-09-13 15:48:35,646 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='Time' />
+2024-09-13 15:48:35,646 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='Product' />
+2024-09-13 15:48:35,646 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='Unit' />
+2024-09-13 15:48:35,646 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Transport Mode' />
+2024-09-13 15:48:35,646 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Transport Mode' />
+2024-09-13 15:48:35,646 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Transport Mode' />
+2024-09-13 15:48:35,646 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Transport Mode ES' />
+2024-09-13 15:48:35,646 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_chl_transport_modes' />
+2024-09-13 15:48:35,646 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Subnat Geography' />
+2024-09-13 15:48:35,646 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Subnat Geography' />
+2024-09-13 15:48:35,646 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Region' />
+2024-09-13 15:48:35,646 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Region ES' />
+2024-09-13 15:48:35,646 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Subnat Geography' />
+2024-09-13 15:48:35,646 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Commune ES' />
+2024-09-13 15:48:35,646 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_chl_communes' />
+2024-09-13 15:48:35,646 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Origin Port' />
+2024-09-13 15:48:35,646 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Origin Port' />
+2024-09-13 15:48:35,646 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Origin Port' />
+2024-09-13 15:48:35,646 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Origin Port Country ID' />
+2024-09-13 15:48:35,646 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Origin Port ES' />
+2024-09-13 15:48:35,646 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_chl_ports_of_entry' />
+2024-09-13 15:48:35,646 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Destination Port' />
+2024-09-13 15:48:35,646 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Destination Port' />
+2024-09-13 15:48:35,646 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Destination Port' />
+2024-09-13 15:48:35,647 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Destination Port Country ID' />
+2024-09-13 15:48:35,647 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Destination Port ES' />
+2024-09-13 15:48:35,647 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_chl_ports_of_entry' />
+2024-09-13 15:48:35,647 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Payment Type' />
+2024-09-13 15:48:35,647 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Payment Type' />
+2024-09-13 15:48:35,647 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Payment Type' />
+2024-09-13 15:48:35,647 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Payment Type ES' />
+2024-09-13 15:48:35,647 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_chl_payment_types' />
+2024-09-13 15:48:35,647 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Trade Value' />
+2024-09-13 15:48:35,647 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Quantity' />
+2024-09-13 15:48:35,647 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Weight' />
+2024-09-13 15:48:35,647 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/dim_shared_subnat_time.xml
+2024-09-13 15:48:35,647 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:48:35,647 tesseract_olap.schema.xml - DEBUG:Parsing node <SharedDimension name='Subnational Time' />
+2024-09-13 15:48:35,648 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Time' />
+2024-09-13 15:48:35,648 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Year' />
+2024-09-13 15:48:35,648 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Quarter' />
+2024-09-13 15:48:35,648 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Month' />
+2024-09-13 15:48:35,648 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Time' />
+2024-09-13 15:48:35,648 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_shared_time' />
+2024-09-13 15:48:35,648 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/emissions.xml
+2024-09-13 15:48:35,648 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:48:35,648 tesseract_olap.schema.xml - DEBUG:Parsing node <Cube name='Emissions' />
+2024-09-13 15:48:35,648 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='emissions' />
+2024-09-13 15:48:35,649 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Exporter' />
+2024-09-13 15:48:35,649 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Country' />
+2024-09-13 15:48:35,649 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Continent' />
+2024-09-13 15:48:35,649 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Exporter' />
+2024-09-13 15:48:35,649 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_country' />
+2024-09-13 15:48:35,649 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Emissions' />
+2024-09-13 15:48:35,649 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/dim_shared_unit.xml
+2024-09-13 15:48:35,649 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:48:35,649 tesseract_olap.schema.xml - DEBUG:Parsing node <SharedDimension name='Shared Units' />
+2024-09-13 15:48:35,650 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Unit' />
+2024-09-13 15:48:35,650 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Unit' />
+2024-09-13 15:48:35,650 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Unit Abbreviation' />
+2024-09-13 15:48:35,650 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_shared_unit' />
+2024-09-13 15:48:35,650 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/gini.xml
+2024-09-13 15:48:35,650 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:48:35,650 tesseract_olap.schema.xml - DEBUG:Parsing node <Cube name='Gini' />
+2024-09-13 15:48:35,650 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='gini' />
+2024-09-13 15:48:35,650 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Exporter' />
+2024-09-13 15:48:35,650 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Country' />
+2024-09-13 15:48:35,650 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Continent' />
+2024-09-13 15:48:35,651 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Exporter' />
+2024-09-13 15:48:35,651 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_country' />
+2024-09-13 15:48:35,651 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Gini Index' />
+2024-09-13 15:48:35,652 logiclayer - DEBUG:Module added on path /tesseract: TesseractModule
+2024-09-13 15:48:35,652 logiclayer - DEBUG:Check added: healthcheck
+2024-09-13 15:48:35,726 logiclayer - DEBUG:Module added on path /complexity: EconomicComplexityModule
+2024-09-13 15:48:35,941 logiclayer - DEBUG:Static folder added on path %s
+2024-09-13 15:48:35,941 logiclayer - DEBUG:Route added on path /: route_index
+2024-09-13 15:48:41,674 clickhouse_driver.connection - DEBUG:Connecting. Database: api. User: default
+2024-09-13 15:48:41,674 clickhouse_driver.connection - DEBUG:Connecting to amtv757tq1.us-east-1.aws.clickhouse.cloud:9440
+2024-09-13 15:49:06,198 clickhouse_driver.connection - DEBUG:Connected to ClickHouse server version 24.6.1, revision: 54468
+2024-09-13 15:49:06,199 clickhouse_driver.connection - DEBUG:Query: SELECT 1
+2024-09-13 15:49:06,200 clickhouse_driver.connection - DEBUG:Block "" send time: 0.000092
+2024-09-13 15:49:06,349 clickhouse_driver.streams.native - DEBUG:Reading column 1
+2024-09-13 15:49:06,349 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:49:06,350 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:49:06,351 tzlocal - DEBUG:/etc/localtime found
+2024-09-13 15:49:06,365 tzlocal - DEBUG:1 found:
+ {'/etc/localtime is a symlink to': 'America/Santiago'}
+2024-09-13 15:49:06,366 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:49:06,366 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:49:06,366 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:49:06,366 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:49:32,576 clickhouse_driver.connection - DEBUG:Connecting. Database: api. User: default
+2024-09-13 15:49:32,577 clickhouse_driver.connection - DEBUG:Connecting to amtv757tq1.us-east-1.aws.clickhouse.cloud:9440
+2024-09-13 15:49:33,121 clickhouse_driver.connection - DEBUG:Connected to ClickHouse server version 24.6.1, revision: 54468
+2024-09-13 15:49:33,122 clickhouse_driver.connection - DEBUG:Query: SELECT DISTINCT "tfact"."year" AS "key" FROM "trade_i_baci_a_96" AS "tfact" ORDER BY "key" ASC
+2024-09-13 15:49:33,122 clickhouse_driver.connection - DEBUG:Block "" send time: 0.000083
+2024-09-13 15:49:33,325 clickhouse_driver.connection - DEBUG:Connecting. Database: api. User: default
+2024-09-13 15:49:33,326 clickhouse_driver.connection - DEBUG:Connecting to amtv757tq1.us-east-1.aws.clickhouse.cloud:9440
+2024-09-13 15:49:33,327 clickhouse_driver.connection - DEBUG:Connecting. Database: api. User: default
+2024-09-13 15:49:33,327 clickhouse_driver.connection - DEBUG:Connecting to amtv757tq1.us-east-1.aws.clickhouse.cloud:9440
+2024-09-13 15:49:33,519 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:49:33,519 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:49:33,520 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:49:33,520 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:49:33,520 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:49:33,520 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:49:33,521 clickhouse_driver.streams.native - DEBUG:Reading column key
+2024-09-13 15:49:33,521 clickhouse_driver.streams.native - DEBUG:Reading column key
+2024-09-13 15:49:33,619 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:49:33,619 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:49:33,620 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:49:33,620 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:49:33,620 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:49:33,620 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:49:33,810 clickhouse_driver.connection - DEBUG:Connected to ClickHouse server version 24.6.1, revision: 54468
+2024-09-13 15:49:33,810 clickhouse_driver.connection - DEBUG:Query: SELECT SUM("tcore"."ms_2063c160") AS "Trade Value","tcore"."lv_24641d6d" AS "Year" FROM (SELECT "tfact"."value" AS "ms_2063c160","tfact"."year" AS "lv_24641d6d" FROM "trade_i_baci_a_96" AS "tfact") AS "tcore" GROUP BY "tcore"."lv_24641d6d" ORDER BY "tcore"."lv_24641d6d" ASC
+2024-09-13 15:49:33,810 clickhouse_driver.connection - DEBUG:Block "" send time: 0.000106
+2024-09-13 15:49:33,811 clickhouse_driver.connection - DEBUG:Connected to ClickHouse server version 24.6.1, revision: 54468
+2024-09-13 15:49:33,811 clickhouse_driver.connection - DEBUG:Query: SELECT DISTINCT "tfact"."year" AS "key" FROM "trade_i_baci_a_96" AS "tfact" ORDER BY "key" ASC
+2024-09-13 15:49:33,811 clickhouse_driver.connection - DEBUG:Block "" send time: 0.000091
+2024-09-13 15:49:34,094 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:49:34,095 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:49:34,095 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:49:34,096 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:49:34,096 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:49:34,096 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:49:34,199 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:49:34,199 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:49:34,200 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:49:34,200 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:49:34,201 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:49:34,201 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:49:34,232 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:49:34,233 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:49:34,234 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:49:34,234 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:49:34,234 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:49:34,234 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:49:34,235 clickhouse_driver.streams.native - DEBUG:Reading column key
+2024-09-13 15:49:34,235 clickhouse_driver.streams.native - DEBUG:Reading column key
+2024-09-13 15:49:34,235 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:49:34,236 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:49:34,236 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:49:34,236 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:49:34,236 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:49:34,237 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:49:34,257 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:49:34,257 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:49:34,257 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:49:34,257 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:49:34,258 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:49:34,258 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:49:34,357 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:49:34,358 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:49:34,358 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:49:34,358 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:49:34,359 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:49:34,359 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:49:34,457 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:49:34,458 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:49:34,459 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:49:34,459 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:49:34,459 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:49:34,459 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:49:34,502 clickhouse_driver.streams.native - DEBUG:Reading column Trade Value
+2024-09-13 15:49:34,502 clickhouse_driver.streams.native - DEBUG:Reading column Year
+2024-09-13 15:49:34,502 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:49:34,502 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:49:34,503 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:49:34,503 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:49:34,503 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:49:34,503 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:49:34,507 tesseract_olap.backend.clickhouse - DEBUG:Cache: DummyProvider MISS 64102797bdb3aef920905f8e696a3f96
+2024-09-13 15:49:41,364 clickhouse_driver.connection - DEBUG:Connecting. Database: api. User: default
+2024-09-13 15:49:41,364 clickhouse_driver.connection - DEBUG:Connecting to amtv757tq1.us-east-1.aws.clickhouse.cloud:9440
+2024-09-13 15:49:41,929 clickhouse_driver.connection - DEBUG:Connected to ClickHouse server version 24.6.1, revision: 54468
+2024-09-13 15:49:41,929 clickhouse_driver.connection - DEBUG:Query: SELECT SUM("tcore"."ms_2063c160") AS "Trade Value","tcore"."lv_24641d6d" AS "Year" FROM (SELECT "tfact"."value" AS "ms_2063c160","tfact"."year" AS "lv_24641d6d" FROM "trade_i_baci_a_96" AS "tfact") AS "tcore" GROUP BY "tcore"."lv_24641d6d" ORDER BY "tcore"."lv_24641d6d" ASC
+2024-09-13 15:49:41,930 clickhouse_driver.connection - DEBUG:Block "" send time: 0.000115
+2024-09-13 15:49:42,270 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:49:42,270 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:49:42,271 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:49:42,271 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:49:42,271 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:49:42,271 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:49:42,373 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:49:42,373 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:49:42,374 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:49:42,374 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:49:42,375 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:49:42,375 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:49:42,408 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:49:42,408 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:49:42,409 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:49:42,409 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:49:42,409 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:49:42,410 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:49:42,491 clickhouse_driver.streams.native - DEBUG:Reading column Trade Value
+2024-09-13 15:49:42,492 clickhouse_driver.streams.native - DEBUG:Reading column Year
+2024-09-13 15:49:42,540 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:49:42,540 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:49:42,542 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:49:42,542 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:49:42,542 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:49:42,542 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:49:42,545 tesseract_olap.backend.clickhouse - DEBUG:Cache: DummyProvider MISS 64102797bdb3aef920905f8e696a3f96
+2024-09-13 15:50:16,568 clickhouse_driver.connection - DEBUG:Connecting. Database: api. User: default
+2024-09-13 15:50:16,568 clickhouse_driver.connection - DEBUG:Connecting to amtv757tq1.us-east-1.aws.clickhouse.cloud:9440
+2024-09-13 15:50:17,104 clickhouse_driver.connection - DEBUG:Connected to ClickHouse server version 24.6.1, revision: 54468
+2024-09-13 15:50:17,105 clickhouse_driver.connection - DEBUG:Query: SELECT SUM("tcore"."ms_2063c160") AS "Trade Value","tcore"."lv_24641d6d" AS "Year" FROM (SELECT "tfact"."value" AS "ms_2063c160","tfact"."year" AS "lv_24641d6d" FROM "trade_i_baci_a_96" AS "tfact") AS "tcore" GROUP BY "tcore"."lv_24641d6d" ORDER BY "tcore"."lv_24641d6d" ASC
+2024-09-13 15:50:17,105 clickhouse_driver.connection - DEBUG:Block "" send time: 0.000064
+2024-09-13 15:50:17,352 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:50:17,352 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:50:17,353 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:50:17,353 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:50:17,353 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:50:17,353 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:50:17,397 clickhouse_driver.streams.native - DEBUG:Reading column Trade Value
+2024-09-13 15:50:17,397 clickhouse_driver.streams.native - DEBUG:Reading column Year
+2024-09-13 15:50:17,496 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:50:17,497 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:50:17,497 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:50:17,498 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:50:17,498 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:50:17,498 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:50:17,501 tesseract_olap.backend.clickhouse - DEBUG:Cache: DummyProvider MISS 64102797bdb3aef920905f8e696a3f96
+2024-09-13 15:50:26,466 clickhouse_driver.connection - DEBUG:Connecting. Database: api. User: default
+2024-09-13 15:50:26,466 clickhouse_driver.connection - DEBUG:Connecting to amtv757tq1.us-east-1.aws.clickhouse.cloud:9440
+2024-09-13 15:50:26,992 clickhouse_driver.connection - DEBUG:Connected to ClickHouse server version 24.6.1, revision: 54468
+2024-09-13 15:50:26,992 clickhouse_driver.connection - DEBUG:Query: SELECT SUM("tcore"."ms_2063c160") AS "Trade Value","tcore"."lv_24641d6d" AS "Year" FROM (SELECT "tfact"."value" AS "ms_2063c160","tfact"."year" AS "lv_24641d6d" FROM "trade_i_baci_a_96" AS "tfact") AS "tcore" GROUP BY "tcore"."lv_24641d6d" ORDER BY "tcore"."lv_24641d6d" ASC
+2024-09-13 15:50:26,993 clickhouse_driver.connection - DEBUG:Block "" send time: 0.000095
+2024-09-13 15:50:27,259 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:50:27,259 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:50:27,260 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:50:27,260 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:50:27,260 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:50:27,260 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:50:27,323 clickhouse_driver.streams.native - DEBUG:Reading column Trade Value
+2024-09-13 15:50:27,323 clickhouse_driver.streams.native - DEBUG:Reading column Year
+2024-09-13 15:50:27,422 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:50:27,422 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:50:27,423 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:50:27,424 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:50:27,424 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:50:27,424 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:50:27,428 tesseract_olap.backend.clickhouse - DEBUG:Cache: DummyProvider MISS 64102797bdb3aef920905f8e696a3f96
+2024-09-13 15:50:30,411 clickhouse_driver.connection - DEBUG:Connecting. Database: api. User: default
+2024-09-13 15:50:30,411 clickhouse_driver.connection - DEBUG:Connecting to amtv757tq1.us-east-1.aws.clickhouse.cloud:9440
+2024-09-13 15:50:30,960 clickhouse_driver.connection - DEBUG:Connected to ClickHouse server version 24.6.1, revision: 54468
+2024-09-13 15:50:30,960 clickhouse_driver.connection - DEBUG:Query: SELECT SUM("tcore"."ms_2063c160") AS "Trade Value","tcore"."lv_24641d6d" AS "Year" FROM (SELECT "tfact"."value" AS "ms_2063c160","tfact"."year" AS "lv_24641d6d" FROM "trade_i_baci_a_96" AS "tfact") AS "tcore" GROUP BY "tcore"."lv_24641d6d" ORDER BY "tcore"."lv_24641d6d" ASC
+2024-09-13 15:50:30,960 clickhouse_driver.connection - DEBUG:Block "" send time: 0.000080
+2024-09-13 15:50:31,230 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:50:31,231 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:50:31,232 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:50:31,232 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:50:31,232 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:50:31,232 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:50:31,290 clickhouse_driver.streams.native - DEBUG:Reading column Trade Value
+2024-09-13 15:50:31,290 clickhouse_driver.streams.native - DEBUG:Reading column Year
+2024-09-13 15:50:31,402 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:50:31,403 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:50:31,403 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:50:31,404 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:50:31,404 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:50:31,404 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:50:31,408 tesseract_olap.backend.clickhouse - DEBUG:Cache: DummyProvider MISS 64102797bdb3aef920905f8e696a3f96
+2024-09-13 15:50:34,112 clickhouse_driver.connection - DEBUG:Connecting. Database: api. User: default
+2024-09-13 15:50:34,112 clickhouse_driver.connection - DEBUG:Connecting to amtv757tq1.us-east-1.aws.clickhouse.cloud:9440
+2024-09-13 15:50:34,590 clickhouse_driver.connection - DEBUG:Connected to ClickHouse server version 24.6.1, revision: 54468
+2024-09-13 15:50:34,590 clickhouse_driver.connection - DEBUG:Query: SELECT SUM("tcore"."ms_2063c160") AS "Trade Value","tcore"."lv_24641d6d" AS "Year" FROM (SELECT "tfact"."value" AS "ms_2063c160","tfact"."year" AS "lv_24641d6d" FROM "trade_i_baci_a_96" AS "tfact") AS "tcore" GROUP BY "tcore"."lv_24641d6d" ORDER BY "tcore"."lv_24641d6d" ASC
+2024-09-13 15:50:34,591 clickhouse_driver.connection - DEBUG:Block "" send time: 0.000173
+2024-09-13 15:50:34,838 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:50:34,839 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:50:34,840 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:50:34,840 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:50:34,840 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:50:34,840 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:50:34,879 clickhouse_driver.streams.native - DEBUG:Reading column Trade Value
+2024-09-13 15:50:34,879 clickhouse_driver.streams.native - DEBUG:Reading column Year
+2024-09-13 15:50:34,982 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:50:34,982 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:50:34,983 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:50:34,983 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:50:34,984 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:50:34,984 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:50:34,987 tesseract_olap.backend.clickhouse - DEBUG:Cache: DummyProvider MISS 64102797bdb3aef920905f8e696a3f96
+2024-09-13 15:50:59,202 tesseract_olap.server - DEBUG:Looking for schemas in local directory: /Users/francisco/datawheel/template-tesseract-api/schema
+2024-09-13 15:50:59,203 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/national_exports.xml
+2024-09-13 15:50:59,203 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:50:59,203 tesseract_olap.schema.xml - DEBUG:Parsing node <Cube name='National Exports' />
+2024-09-13 15:50:59,203 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='national_exports' />
+2024-09-13 15:50:59,203 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Year' />
+2024-09-13 15:50:59,203 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Year' />
+2024-09-13 15:50:59,203 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Year' />
+2024-09-13 15:50:59,203 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Exporter' />
+2024-09-13 15:50:59,204 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Country' />
+2024-09-13 15:50:59,204 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Continent' />
+2024-09-13 15:50:59,204 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Exporter' />
+2024-09-13 15:50:59,204 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_country' />
+2024-09-13 15:50:59,204 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Product' />
+2024-09-13 15:50:59,204 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='HS4' />
+2024-09-13 15:50:59,204 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Section' />
+2024-09-13 15:50:59,204 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='HS2' />
+2024-09-13 15:50:59,204 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='HS4' />
+2024-09-13 15:50:59,204 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_hs4' />
+2024-09-13 15:50:59,204 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='With Oil' />
+2024-09-13 15:50:59,204 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='With Oil' />
+2024-09-13 15:50:59,204 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='With Oil' />
+2024-09-13 15:50:59,204 tesseract_olap.schema.xml - DEBUG:Parsing node <InlineTable name='oil_table' />
+2024-09-13 15:50:59,204 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Trade Values' />
+2024-09-13 15:50:59,205 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/acs_ygl_language_spoken_at_home_by_english_ability_2016_1.xml
+2024-09-13 15:50:59,205 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:50:59,205 tesseract_olap.schema.xml - DEBUG:Parsing node <Cube name='ACS Lang spoken at home' />
+2024-09-13 15:50:59,205 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='acs_ygl_language_spoken_at_home_by_english_ability_2016_1' />
+2024-09-13 15:50:59,205 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Geography' />
+2024-09-13 15:50:59,205 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Nation' />
+2024-09-13 15:50:59,205 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Nation' />
+2024-09-13 15:50:59,205 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='shapes2017_us' />
+2024-09-13 15:50:59,205 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Place' />
+2024-09-13 15:50:59,205 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='State Place' />
+2024-09-13 15:50:59,205 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Place' />
+2024-09-13 15:50:59,205 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Area Place' />
+2024-09-13 15:50:59,206 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='shapes2017_places' />
+2024-09-13 15:50:59,206 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='County' />
+2024-09-13 15:50:59,206 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='State County' />
+2024-09-13 15:50:59,206 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='County' />
+2024-09-13 15:50:59,206 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Area County' />
+2024-09-13 15:50:59,206 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='shapes2017_counties' />
+2024-09-13 15:50:59,206 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='State' />
+2024-09-13 15:50:59,206 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='State' />
+2024-09-13 15:50:59,206 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Area State' />
+2024-09-13 15:50:59,206 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='shapes2017_states' />
+2024-09-13 15:50:59,207 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='MSA' />
+2024-09-13 15:50:59,207 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='MSA' />
+2024-09-13 15:50:59,207 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Area MSA' />
+2024-09-13 15:50:59,207 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='shapes2017_msas' />
+2024-09-13 15:50:59,207 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='PUMA' />
+2024-09-13 15:50:59,207 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='State Puma' />
+2024-09-13 15:50:59,207 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='PUMA' />
+2024-09-13 15:50:59,207 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Area Puma' />
+2024-09-13 15:50:59,207 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='shapes2017_pumas' />
+2024-09-13 15:50:59,207 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Year' />
+2024-09-13 15:50:59,207 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Year' />
+2024-09-13 15:50:59,207 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Year' />
+2024-09-13 15:50:59,207 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Language Spoken at Home' />
+2024-09-13 15:50:59,207 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Language Spoken at Home' />
+2024-09-13 15:50:59,207 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Language Spoken at Home' />
+2024-09-13 15:50:59,207 tesseract_olap.schema.xml - DEBUG:Parsing node <InlineTable name='dim_0_table' />
+2024-09-13 15:50:59,208 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='English Ability' />
+2024-09-13 15:50:59,208 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='English Ability' />
+2024-09-13 15:50:59,208 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='English Ability' />
+2024-09-13 15:50:59,208 tesseract_olap.schema.xml - DEBUG:Parsing node <InlineTable name='dim_1_table' />
+2024-09-13 15:50:59,208 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Languages Spoken' />
+2024-09-13 15:50:59,208 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/trade_i_baci_a_96.xml
+2024-09-13 15:50:59,209 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:50:59,209 tesseract_olap.schema.xml - DEBUG:Parsing node <Cube name='trade_i_baci_a_96' />
+2024-09-13 15:50:59,209 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='trade_i_baci_a_96' />
+2024-09-13 15:50:59,209 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='HS Product' />
+2024-09-13 15:50:59,209 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='Unit' />
+2024-09-13 15:50:59,209 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='Exporter' />
+2024-09-13 15:50:59,209 tesseract_olap.schema.xml - DEBUG:Parsing node <HierarchyUsage name='Exporter' />
+2024-09-13 15:50:59,209 tesseract_olap.schema.xml - DEBUG:Parsing node <LevelUsage name='Exporter Continent' />
+2024-09-13 15:50:59,209 tesseract_olap.schema.xml - DEBUG:Parsing node <LevelUsage name='Exporter Country' />
+2024-09-13 15:50:59,209 tesseract_olap.schema.xml - DEBUG:Parsing node <PropertyUsage name='Exporter ISO 2' />
+2024-09-13 15:50:59,209 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='Importer' />
+2024-09-13 15:50:59,209 tesseract_olap.schema.xml - DEBUG:Parsing node <HierarchyUsage name='Importer' />
+2024-09-13 15:50:59,209 tesseract_olap.schema.xml - DEBUG:Parsing node <LevelUsage name='Importer Continent' />
+2024-09-13 15:50:59,209 tesseract_olap.schema.xml - DEBUG:Parsing node <LevelUsage name='Importer Country' />
+2024-09-13 15:50:59,209 tesseract_olap.schema.xml - DEBUG:Parsing node <PropertyUsage name='Importer ISO 2' />
+2024-09-13 15:50:59,209 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Year' />
+2024-09-13 15:50:59,209 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Year' />
+2024-09-13 15:50:59,209 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Year' />
+2024-09-13 15:50:59,210 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Trade Value' />
+2024-09-13 15:50:59,210 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Quantity' />
+2024-09-13 15:50:59,210 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/dim_shared_geography.xml
+2024-09-13 15:50:59,210 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:50:59,210 tesseract_olap.schema.xml - DEBUG:Parsing node <SharedDimension name='Geography' />
+2024-09-13 15:50:59,210 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Geography' />
+2024-09-13 15:50:59,210 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Continent' />
+2024-09-13 15:50:59,210 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Country' />
+2024-09-13 15:50:59,210 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='ISO 2' />
+2024-09-13 15:50:59,210 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='ISO 3' />
+2024-09-13 15:50:59,210 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_shared_countries' />
+2024-09-13 15:50:59,210 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/dim_shared_subnational_hs6.xml
+2024-09-13 15:50:59,211 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:50:59,211 tesseract_olap.schema.xml - DEBUG:Parsing node <SharedDimension name='Subnational HS6 Product' />
+2024-09-13 15:50:59,211 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Product' />
+2024-09-13 15:50:59,211 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Section' />
+2024-09-13 15:50:59,211 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Section' />
+2024-09-13 15:50:59,211 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Section ES' />
+2024-09-13 15:50:59,211 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='HS2' />
+2024-09-13 15:50:59,211 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='HS2' />
+2024-09-13 15:50:59,211 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='HS2 ES' />
+2024-09-13 15:50:59,211 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='HS4' />
+2024-09-13 15:50:59,211 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='HS4' />
+2024-09-13 15:50:59,211 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='HS4 ES' />
+2024-09-13 15:50:59,211 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Product' />
+2024-09-13 15:50:59,211 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='HS6' />
+2024-09-13 15:50:59,211 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Product ES' />
+2024-09-13 15:50:59,211 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_shared_master_hs6' />
+2024-09-13 15:50:59,211 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/dim_shared_units.xml
+2024-09-13 15:50:59,212 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:50:59,212 tesseract_olap.schema.xml - DEBUG:Parsing node <SharedDimension name='Shared Units' />
+2024-09-13 15:50:59,212 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Unit' />
+2024-09-13 15:50:59,212 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Unit' />
+2024-09-13 15:50:59,212 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Unit Abbreviation' />
+2024-09-13 15:50:59,212 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_shared_unit' />
+2024-09-13 15:50:59,212 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/dim_shared_trade_flow.xml
+2024-09-13 15:50:59,212 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:50:59,212 tesseract_olap.schema.xml - DEBUG:Parsing node <SharedDimension name='Trade Flow' />
+2024-09-13 15:50:59,212 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Trade Flow' />
+2024-09-13 15:50:59,212 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Trade Flow' />
+2024-09-13 15:50:59,212 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_shared_trade_flow' />
+2024-09-13 15:50:59,212 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/dim_shared_hs6.xml
+2024-09-13 15:50:59,212 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:50:59,212 tesseract_olap.schema.xml - DEBUG:Parsing node <SharedDimension name='HS96' />
+2024-09-13 15:50:59,212 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='HS96' />
+2024-09-13 15:50:59,212 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Section' />
+2024-09-13 15:50:59,213 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Section' />
+2024-09-13 15:50:59,213 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='HS2' />
+2024-09-13 15:50:59,213 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='HS2' />
+2024-09-13 15:50:59,213 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='HS4' />
+2024-09-13 15:50:59,213 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='HS4' />
+2024-09-13 15:50:59,213 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='HS6' />
+2024-09-13 15:50:59,213 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='HS6' />
+2024-09-13 15:50:59,213 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_shared_hs96' />
+2024-09-13 15:50:59,213 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/trade_s_chl_m_hs.xml
+2024-09-13 15:50:59,213 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:50:59,213 tesseract_olap.schema.xml - DEBUG:Parsing node <Cube name='trade_s_chl_m_hs' />
+2024-09-13 15:50:59,213 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='trade_s_chl_m_hs' />
+2024-09-13 15:50:59,213 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='Partner' />
+2024-09-13 15:50:59,213 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='Trade Flow' />
+2024-09-13 15:50:59,213 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='Time' />
+2024-09-13 15:50:59,213 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='Product' />
+2024-09-13 15:50:59,213 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='Unit' />
+2024-09-13 15:50:59,214 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Transport Mode' />
+2024-09-13 15:50:59,214 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Transport Mode' />
+2024-09-13 15:50:59,214 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Transport Mode' />
+2024-09-13 15:50:59,214 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Transport Mode ES' />
+2024-09-13 15:50:59,214 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_chl_transport_modes' />
+2024-09-13 15:50:59,214 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Subnat Geography' />
+2024-09-13 15:50:59,214 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Subnat Geography' />
+2024-09-13 15:50:59,214 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Region' />
+2024-09-13 15:50:59,215 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Region ES' />
+2024-09-13 15:50:59,215 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Subnat Geography' />
+2024-09-13 15:50:59,215 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Commune ES' />
+2024-09-13 15:50:59,215 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_chl_communes' />
+2024-09-13 15:50:59,215 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Origin Port' />
+2024-09-13 15:50:59,215 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Origin Port' />
+2024-09-13 15:50:59,215 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Origin Port' />
+2024-09-13 15:50:59,215 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Origin Port Country ID' />
+2024-09-13 15:50:59,215 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Origin Port ES' />
+2024-09-13 15:50:59,215 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_chl_ports_of_entry' />
+2024-09-13 15:50:59,215 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Destination Port' />
+2024-09-13 15:50:59,215 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Destination Port' />
+2024-09-13 15:50:59,215 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Destination Port' />
+2024-09-13 15:50:59,215 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Destination Port Country ID' />
+2024-09-13 15:50:59,215 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Destination Port ES' />
+2024-09-13 15:50:59,215 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_chl_ports_of_entry' />
+2024-09-13 15:50:59,215 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Payment Type' />
+2024-09-13 15:50:59,215 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Payment Type' />
+2024-09-13 15:50:59,216 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Payment Type' />
+2024-09-13 15:50:59,216 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Payment Type ES' />
+2024-09-13 15:50:59,216 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_chl_payment_types' />
+2024-09-13 15:50:59,216 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Trade Value' />
+2024-09-13 15:50:59,216 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Quantity' />
+2024-09-13 15:50:59,216 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Weight' />
+2024-09-13 15:50:59,216 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/dim_shared_subnat_time.xml
+2024-09-13 15:50:59,216 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:50:59,217 tesseract_olap.schema.xml - DEBUG:Parsing node <SharedDimension name='Subnational Time' />
+2024-09-13 15:50:59,217 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Time' />
+2024-09-13 15:50:59,217 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Year' />
+2024-09-13 15:50:59,217 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Quarter' />
+2024-09-13 15:50:59,217 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Month' />
+2024-09-13 15:50:59,217 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Time' />
+2024-09-13 15:50:59,217 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_shared_time' />
+2024-09-13 15:50:59,217 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/emissions.xml
+2024-09-13 15:50:59,217 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:50:59,217 tesseract_olap.schema.xml - DEBUG:Parsing node <Cube name='Emissions' />
+2024-09-13 15:50:59,217 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='emissions' />
+2024-09-13 15:50:59,217 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Exporter' />
+2024-09-13 15:50:59,217 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Country' />
+2024-09-13 15:50:59,217 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Continent' />
+2024-09-13 15:50:59,217 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Exporter' />
+2024-09-13 15:50:59,217 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_country' />
+2024-09-13 15:50:59,217 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Emissions' />
+2024-09-13 15:50:59,218 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/dim_shared_unit.xml
+2024-09-13 15:50:59,218 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:50:59,218 tesseract_olap.schema.xml - DEBUG:Parsing node <SharedDimension name='Shared Units' />
+2024-09-13 15:50:59,218 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Unit' />
+2024-09-13 15:50:59,218 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Unit' />
+2024-09-13 15:50:59,218 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Unit Abbreviation' />
+2024-09-13 15:50:59,218 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_shared_unit' />
+2024-09-13 15:50:59,218 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/gini.xml
+2024-09-13 15:50:59,218 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:50:59,218 tesseract_olap.schema.xml - DEBUG:Parsing node <Cube name='Gini' />
+2024-09-13 15:50:59,218 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='gini' />
+2024-09-13 15:50:59,218 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Exporter' />
+2024-09-13 15:50:59,218 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Country' />
+2024-09-13 15:50:59,218 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Continent' />
+2024-09-13 15:50:59,218 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Exporter' />
+2024-09-13 15:50:59,218 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_country' />
+2024-09-13 15:50:59,218 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Gini Index' />
+2024-09-13 15:50:59,219 logiclayer - DEBUG:Module added on path /tesseract: TesseractModule
+2024-09-13 15:50:59,219 logiclayer - DEBUG:Check added: healthcheck
+2024-09-13 15:50:59,294 logiclayer - DEBUG:Module added on path /complexity: EconomicComplexityModule
+2024-09-13 15:50:59,532 logiclayer - DEBUG:Static folder added on path %s
+2024-09-13 15:50:59,533 logiclayer - DEBUG:Route added on path /: route_index
+2024-09-13 15:51:03,274 clickhouse_driver.connection - DEBUG:Connecting. Database: api. User: default
+2024-09-13 15:51:03,274 clickhouse_driver.connection - DEBUG:Connecting to amtv757tq1.us-east-1.aws.clickhouse.cloud:9440
+2024-09-13 15:51:03,731 clickhouse_driver.connection - DEBUG:Connected to ClickHouse server version 24.6.1, revision: 54468
+2024-09-13 15:51:03,732 clickhouse_driver.connection - DEBUG:Query: SELECT SUM("tcore"."ms_2063c160") AS "Trade Value","tcore"."lv_24641d6d" AS "Year" FROM (SELECT "tfact"."value" AS "ms_2063c160","tfact"."year" AS "lv_24641d6d" FROM "trade_i_baci_a_96" AS "tfact") AS "tcore" GROUP BY "tcore"."lv_24641d6d" ORDER BY "tcore"."lv_24641d6d" ASC
+2024-09-13 15:51:03,732 clickhouse_driver.connection - DEBUG:Block "" send time: 0.000152
+2024-09-13 15:51:03,976 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:51:03,977 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:51:03,978 tzlocal - DEBUG:/etc/localtime found
+2024-09-13 15:51:03,983 tzlocal - DEBUG:1 found:
+ {'/etc/localtime is a symlink to': 'America/Santiago'}
+2024-09-13 15:51:03,984 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:51:03,984 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:51:03,984 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:51:03,984 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:51:04,018 clickhouse_driver.streams.native - DEBUG:Reading column Trade Value
+2024-09-13 15:51:04,019 clickhouse_driver.streams.native - DEBUG:Reading column Year
+2024-09-13 15:51:04,110 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:51:04,111 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:51:04,112 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:51:04,112 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:51:04,112 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:51:04,112 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:51:04,117 tesseract_olap.backend.clickhouse - DEBUG:Cache: DummyProvider MISS 64102797bdb3aef920905f8e696a3f96
+2024-09-13 15:51:06,831 clickhouse_driver.connection - DEBUG:Connecting. Database: api. User: default
+2024-09-13 15:51:06,831 clickhouse_driver.connection - DEBUG:Connecting to amtv757tq1.us-east-1.aws.clickhouse.cloud:9440
+2024-09-13 15:51:07,296 clickhouse_driver.connection - DEBUG:Connected to ClickHouse server version 24.6.1, revision: 54468
+2024-09-13 15:51:07,296 clickhouse_driver.connection - DEBUG:Query: SELECT SUM("tcore"."ms_2063c160") AS "Trade Value","tcore"."lv_24641d6d" AS "Year" FROM (SELECT "tfact"."value" AS "ms_2063c160","tfact"."year" AS "lv_24641d6d" FROM "trade_i_baci_a_96" AS "tfact") AS "tcore" GROUP BY "tcore"."lv_24641d6d" ORDER BY "tcore"."lv_24641d6d" ASC
+2024-09-13 15:51:07,297 clickhouse_driver.connection - DEBUG:Block "" send time: 0.000485
+2024-09-13 15:51:07,542 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:51:07,542 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:51:07,543 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:51:07,544 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:51:07,544 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:51:07,544 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:51:07,579 clickhouse_driver.streams.native - DEBUG:Reading column Trade Value
+2024-09-13 15:51:07,579 clickhouse_driver.streams.native - DEBUG:Reading column Year
+2024-09-13 15:51:07,682 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:51:07,682 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:51:07,683 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:51:07,684 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:51:07,684 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:51:07,684 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:51:07,687 tesseract_olap.backend.clickhouse - DEBUG:Cache: DummyProvider MISS 64102797bdb3aef920905f8e696a3f96
+2024-09-13 15:51:09,971 clickhouse_driver.connection - DEBUG:Connecting. Database: api. User: default
+2024-09-13 15:51:09,972 clickhouse_driver.connection - DEBUG:Connecting to amtv757tq1.us-east-1.aws.clickhouse.cloud:9440
+2024-09-13 15:51:10,503 clickhouse_driver.connection - DEBUG:Connected to ClickHouse server version 24.6.1, revision: 54468
+2024-09-13 15:51:10,504 clickhouse_driver.connection - DEBUG:Query: SELECT SUM("tcore"."ms_2063c160") AS "Trade Value","tcore"."lv_24641d6d" AS "Year" FROM (SELECT "tfact"."value" AS "ms_2063c160","tfact"."year" AS "lv_24641d6d" FROM "trade_i_baci_a_96" AS "tfact") AS "tcore" GROUP BY "tcore"."lv_24641d6d" ORDER BY "tcore"."lv_24641d6d" ASC
+2024-09-13 15:51:10,504 clickhouse_driver.connection - DEBUG:Block "" send time: 0.000098
+2024-09-13 15:51:10,772 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:51:10,772 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:51:10,774 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:51:10,774 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:51:10,774 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:51:10,775 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:51:10,830 clickhouse_driver.streams.native - DEBUG:Reading column Trade Value
+2024-09-13 15:51:10,830 clickhouse_driver.streams.native - DEBUG:Reading column Year
+2024-09-13 15:51:10,934 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:51:10,935 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:51:10,935 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:51:10,936 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:51:10,936 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:51:10,936 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:51:10,939 tesseract_olap.backend.clickhouse - DEBUG:Cache: DummyProvider MISS 64102797bdb3aef920905f8e696a3f96
+2024-09-13 15:51:15,288 clickhouse_driver.connection - DEBUG:Connecting. Database: api. User: default
+2024-09-13 15:51:15,288 clickhouse_driver.connection - DEBUG:Connecting to amtv757tq1.us-east-1.aws.clickhouse.cloud:9440
+2024-09-13 15:51:15,770 clickhouse_driver.connection - DEBUG:Connected to ClickHouse server version 24.6.1, revision: 54468
+2024-09-13 15:51:15,771 clickhouse_driver.connection - DEBUG:Query: SELECT SUM("tcore"."ms_2063c160") AS "Trade Value","tcore"."lv_24641d6d" AS "Year" FROM (SELECT "tfact"."value" AS "ms_2063c160","tfact"."year" AS "lv_24641d6d" FROM "trade_i_baci_a_96" AS "tfact") AS "tcore" GROUP BY "tcore"."lv_24641d6d" ORDER BY "tcore"."lv_24641d6d" ASC
+2024-09-13 15:51:15,771 clickhouse_driver.connection - DEBUG:Block "" send time: 0.000138
+2024-09-13 15:51:16,013 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:51:16,013 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:51:16,014 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:51:16,014 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:51:16,014 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:51:16,014 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:51:16,051 clickhouse_driver.streams.native - DEBUG:Reading column Trade Value
+2024-09-13 15:51:16,052 clickhouse_driver.streams.native - DEBUG:Reading column Year
+2024-09-13 15:51:16,149 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:51:16,150 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:51:16,151 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:51:16,151 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:51:16,152 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:51:16,152 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:51:16,155 tesseract_olap.backend.clickhouse - DEBUG:Cache: DummyProvider MISS 64102797bdb3aef920905f8e696a3f96
+2024-09-13 15:52:21,185 tesseract_olap.server - DEBUG:Looking for schemas in local directory: /Users/francisco/datawheel/template-tesseract-api/schema
+2024-09-13 15:52:21,186 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/national_exports.xml
+2024-09-13 15:52:21,187 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:52:21,187 tesseract_olap.schema.xml - DEBUG:Parsing node <Cube name='National Exports' />
+2024-09-13 15:52:21,187 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='national_exports' />
+2024-09-13 15:52:21,187 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Year' />
+2024-09-13 15:52:21,187 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Year' />
+2024-09-13 15:52:21,187 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Year' />
+2024-09-13 15:52:21,187 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Exporter' />
+2024-09-13 15:52:21,187 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Country' />
+2024-09-13 15:52:21,187 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Continent' />
+2024-09-13 15:52:21,187 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Exporter' />
+2024-09-13 15:52:21,187 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_country' />
+2024-09-13 15:52:21,187 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Product' />
+2024-09-13 15:52:21,187 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='HS4' />
+2024-09-13 15:52:21,187 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Section' />
+2024-09-13 15:52:21,187 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='HS2' />
+2024-09-13 15:52:21,188 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='HS4' />
+2024-09-13 15:52:21,188 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_hs4' />
+2024-09-13 15:52:21,188 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='With Oil' />
+2024-09-13 15:52:21,188 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='With Oil' />
+2024-09-13 15:52:21,188 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='With Oil' />
+2024-09-13 15:52:21,188 tesseract_olap.schema.xml - DEBUG:Parsing node <InlineTable name='oil_table' />
+2024-09-13 15:52:21,188 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Trade Values' />
+2024-09-13 15:52:21,188 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/acs_ygl_language_spoken_at_home_by_english_ability_2016_1.xml
+2024-09-13 15:52:21,188 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:52:21,189 tesseract_olap.schema.xml - DEBUG:Parsing node <Cube name='ACS Lang spoken at home' />
+2024-09-13 15:52:21,189 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='acs_ygl_language_spoken_at_home_by_english_ability_2016_1' />
+2024-09-13 15:52:21,189 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Geography' />
+2024-09-13 15:52:21,189 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Nation' />
+2024-09-13 15:52:21,189 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Nation' />
+2024-09-13 15:52:21,189 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='shapes2017_us' />
+2024-09-13 15:52:21,189 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Place' />
+2024-09-13 15:52:21,189 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='State Place' />
+2024-09-13 15:52:21,189 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Place' />
+2024-09-13 15:52:21,189 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Area Place' />
+2024-09-13 15:52:21,189 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='shapes2017_places' />
+2024-09-13 15:52:21,189 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='County' />
+2024-09-13 15:52:21,189 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='State County' />
+2024-09-13 15:52:21,189 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='County' />
+2024-09-13 15:52:21,189 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Area County' />
+2024-09-13 15:52:21,189 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='shapes2017_counties' />
+2024-09-13 15:52:21,189 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='State' />
+2024-09-13 15:52:21,189 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='State' />
+2024-09-13 15:52:21,189 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Area State' />
+2024-09-13 15:52:21,189 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='shapes2017_states' />
+2024-09-13 15:52:21,189 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='MSA' />
+2024-09-13 15:52:21,190 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='MSA' />
+2024-09-13 15:52:21,190 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Area MSA' />
+2024-09-13 15:52:21,190 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='shapes2017_msas' />
+2024-09-13 15:52:21,190 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='PUMA' />
+2024-09-13 15:52:21,190 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='State Puma' />
+2024-09-13 15:52:21,190 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='PUMA' />
+2024-09-13 15:52:21,190 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Area Puma' />
+2024-09-13 15:52:21,190 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='shapes2017_pumas' />
+2024-09-13 15:52:21,190 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Year' />
+2024-09-13 15:52:21,190 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Year' />
+2024-09-13 15:52:21,190 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Year' />
+2024-09-13 15:52:21,190 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Language Spoken at Home' />
+2024-09-13 15:52:21,190 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Language Spoken at Home' />
+2024-09-13 15:52:21,190 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Language Spoken at Home' />
+2024-09-13 15:52:21,190 tesseract_olap.schema.xml - DEBUG:Parsing node <InlineTable name='dim_0_table' />
+2024-09-13 15:52:21,191 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='English Ability' />
+2024-09-13 15:52:21,191 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='English Ability' />
+2024-09-13 15:52:21,191 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='English Ability' />
+2024-09-13 15:52:21,191 tesseract_olap.schema.xml - DEBUG:Parsing node <InlineTable name='dim_1_table' />
+2024-09-13 15:52:21,191 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Languages Spoken' />
+2024-09-13 15:52:21,191 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/trade_i_baci_a_96.xml
+2024-09-13 15:52:21,191 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:52:21,191 tesseract_olap.schema.xml - DEBUG:Parsing node <Cube name='trade_i_baci_a_96' />
+2024-09-13 15:52:21,191 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='trade_i_baci_a_96' />
+2024-09-13 15:52:21,192 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='HS Product' />
+2024-09-13 15:52:21,192 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='Unit' />
+2024-09-13 15:52:21,192 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='Exporter' />
+2024-09-13 15:52:21,192 tesseract_olap.schema.xml - DEBUG:Parsing node <HierarchyUsage name='Exporter' />
+2024-09-13 15:52:21,192 tesseract_olap.schema.xml - DEBUG:Parsing node <LevelUsage name='Exporter Continent' />
+2024-09-13 15:52:21,192 tesseract_olap.schema.xml - DEBUG:Parsing node <LevelUsage name='Exporter Country' />
+2024-09-13 15:52:21,192 tesseract_olap.schema.xml - DEBUG:Parsing node <PropertyUsage name='Exporter ISO 2' />
+2024-09-13 15:52:21,192 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='Importer' />
+2024-09-13 15:52:21,192 tesseract_olap.schema.xml - DEBUG:Parsing node <HierarchyUsage name='Importer' />
+2024-09-13 15:52:21,192 tesseract_olap.schema.xml - DEBUG:Parsing node <LevelUsage name='Importer Continent' />
+2024-09-13 15:52:21,192 tesseract_olap.schema.xml - DEBUG:Parsing node <LevelUsage name='Importer Country' />
+2024-09-13 15:52:21,192 tesseract_olap.schema.xml - DEBUG:Parsing node <PropertyUsage name='Importer ISO 2' />
+2024-09-13 15:52:21,192 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Year' />
+2024-09-13 15:52:21,192 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Year' />
+2024-09-13 15:52:21,192 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Year' />
+2024-09-13 15:52:21,192 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Trade Value' />
+2024-09-13 15:52:21,192 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Quantity' />
+2024-09-13 15:52:21,193 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/dim_shared_geography.xml
+2024-09-13 15:52:21,193 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:52:21,193 tesseract_olap.schema.xml - DEBUG:Parsing node <SharedDimension name='Geography' />
+2024-09-13 15:52:21,193 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Geography' />
+2024-09-13 15:52:21,193 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Continent' />
+2024-09-13 15:52:21,193 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Country' />
+2024-09-13 15:52:21,193 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='ISO 2' />
+2024-09-13 15:52:21,193 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='ISO 3' />
+2024-09-13 15:52:21,193 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_shared_countries' />
+2024-09-13 15:52:21,194 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/dim_shared_subnational_hs6.xml
+2024-09-13 15:52:21,194 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:52:21,194 tesseract_olap.schema.xml - DEBUG:Parsing node <SharedDimension name='Subnational HS6 Product' />
+2024-09-13 15:52:21,194 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Product' />
+2024-09-13 15:52:21,194 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Section' />
+2024-09-13 15:52:21,194 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Section' />
+2024-09-13 15:52:21,194 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Section ES' />
+2024-09-13 15:52:21,194 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='HS2' />
+2024-09-13 15:52:21,194 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='HS2' />
+2024-09-13 15:52:21,194 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='HS2 ES' />
+2024-09-13 15:52:21,195 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='HS4' />
+2024-09-13 15:52:21,195 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='HS4' />
+2024-09-13 15:52:21,195 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='HS4 ES' />
+2024-09-13 15:52:21,195 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Product' />
+2024-09-13 15:52:21,195 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='HS6' />
+2024-09-13 15:52:21,195 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Product ES' />
+2024-09-13 15:52:21,195 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_shared_master_hs6' />
+2024-09-13 15:52:21,195 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/dim_shared_units.xml
+2024-09-13 15:52:21,195 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:52:21,195 tesseract_olap.schema.xml - DEBUG:Parsing node <SharedDimension name='Shared Units' />
+2024-09-13 15:52:21,196 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Unit' />
+2024-09-13 15:52:21,196 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Unit' />
+2024-09-13 15:52:21,196 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Unit Abbreviation' />
+2024-09-13 15:52:21,196 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_shared_unit' />
+2024-09-13 15:52:21,196 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/dim_shared_trade_flow.xml
+2024-09-13 15:52:21,196 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:52:21,196 tesseract_olap.schema.xml - DEBUG:Parsing node <SharedDimension name='Trade Flow' />
+2024-09-13 15:52:21,196 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Trade Flow' />
+2024-09-13 15:52:21,196 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Trade Flow' />
+2024-09-13 15:52:21,196 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_shared_trade_flow' />
+2024-09-13 15:52:21,196 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/dim_shared_hs6.xml
+2024-09-13 15:52:21,196 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:52:21,196 tesseract_olap.schema.xml - DEBUG:Parsing node <SharedDimension name='HS96' />
+2024-09-13 15:52:21,196 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='HS96' />
+2024-09-13 15:52:21,196 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Section' />
+2024-09-13 15:52:21,196 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Section' />
+2024-09-13 15:52:21,197 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='HS2' />
+2024-09-13 15:52:21,197 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='HS2' />
+2024-09-13 15:52:21,197 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='HS4' />
+2024-09-13 15:52:21,197 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='HS4' />
+2024-09-13 15:52:21,197 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='HS6' />
+2024-09-13 15:52:21,197 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='HS6' />
+2024-09-13 15:52:21,197 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_shared_hs96' />
+2024-09-13 15:52:21,197 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/trade_s_chl_m_hs.xml
+2024-09-13 15:52:21,197 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:52:21,197 tesseract_olap.schema.xml - DEBUG:Parsing node <Cube name='trade_s_chl_m_hs' />
+2024-09-13 15:52:21,197 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='trade_s_chl_m_hs' />
+2024-09-13 15:52:21,197 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='Partner' />
+2024-09-13 15:52:21,197 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='Trade Flow' />
+2024-09-13 15:52:21,197 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='Time' />
+2024-09-13 15:52:21,197 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='Product' />
+2024-09-13 15:52:21,197 tesseract_olap.schema.xml - DEBUG:Parsing node <DimensionUsage name='Unit' />
+2024-09-13 15:52:21,197 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Transport Mode' />
+2024-09-13 15:52:21,197 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Transport Mode' />
+2024-09-13 15:52:21,197 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Transport Mode' />
+2024-09-13 15:52:21,198 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Transport Mode ES' />
+2024-09-13 15:52:21,198 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_chl_transport_modes' />
+2024-09-13 15:52:21,198 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Subnat Geography' />
+2024-09-13 15:52:21,198 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Subnat Geography' />
+2024-09-13 15:52:21,198 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Region' />
+2024-09-13 15:52:21,198 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Region ES' />
+2024-09-13 15:52:21,198 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Subnat Geography' />
+2024-09-13 15:52:21,198 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Commune ES' />
+2024-09-13 15:52:21,198 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_chl_communes' />
+2024-09-13 15:52:21,198 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Origin Port' />
+2024-09-13 15:52:21,198 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Origin Port' />
+2024-09-13 15:52:21,198 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Origin Port' />
+2024-09-13 15:52:21,198 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Origin Port Country ID' />
+2024-09-13 15:52:21,198 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Origin Port ES' />
+2024-09-13 15:52:21,198 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_chl_ports_of_entry' />
+2024-09-13 15:52:21,198 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Destination Port' />
+2024-09-13 15:52:21,198 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Destination Port' />
+2024-09-13 15:52:21,198 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Destination Port' />
+2024-09-13 15:52:21,198 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Destination Port Country ID' />
+2024-09-13 15:52:21,198 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Destination Port ES' />
+2024-09-13 15:52:21,198 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_chl_ports_of_entry' />
+2024-09-13 15:52:21,198 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Payment Type' />
+2024-09-13 15:52:21,199 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Payment Type' />
+2024-09-13 15:52:21,199 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Payment Type' />
+2024-09-13 15:52:21,199 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Payment Type ES' />
+2024-09-13 15:52:21,199 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_chl_payment_types' />
+2024-09-13 15:52:21,199 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Trade Value' />
+2024-09-13 15:52:21,199 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Quantity' />
+2024-09-13 15:52:21,199 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Weight' />
+2024-09-13 15:52:21,199 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/dim_shared_subnat_time.xml
+2024-09-13 15:52:21,199 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:52:21,199 tesseract_olap.schema.xml - DEBUG:Parsing node <SharedDimension name='Subnational Time' />
+2024-09-13 15:52:21,199 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Time' />
+2024-09-13 15:52:21,199 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Year' />
+2024-09-13 15:52:21,199 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Quarter' />
+2024-09-13 15:52:21,200 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Month' />
+2024-09-13 15:52:21,200 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Time' />
+2024-09-13 15:52:21,200 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_shared_time' />
+2024-09-13 15:52:21,200 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/emissions.xml
+2024-09-13 15:52:21,200 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:52:21,200 tesseract_olap.schema.xml - DEBUG:Parsing node <Cube name='Emissions' />
+2024-09-13 15:52:21,200 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='emissions' />
+2024-09-13 15:52:21,200 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Exporter' />
+2024-09-13 15:52:21,200 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Country' />
+2024-09-13 15:52:21,200 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Continent' />
+2024-09-13 15:52:21,200 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Exporter' />
+2024-09-13 15:52:21,200 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_country' />
+2024-09-13 15:52:21,200 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Emissions' />
+2024-09-13 15:52:21,201 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/dim_shared_unit.xml
+2024-09-13 15:52:21,201 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:52:21,201 tesseract_olap.schema.xml - DEBUG:Parsing node <SharedDimension name='Shared Units' />
+2024-09-13 15:52:21,201 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Unit' />
+2024-09-13 15:52:21,201 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Unit' />
+2024-09-13 15:52:21,201 tesseract_olap.schema.xml - DEBUG:Parsing node <Property name='Unit Abbreviation' />
+2024-09-13 15:52:21,201 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_shared_unit' />
+2024-09-13 15:52:21,201 tesseract_olap.server - DEBUG:Parsing XML schema from file contents: /Users/francisco/datawheel/template-tesseract-api/schema/gini.xml
+2024-09-13 15:52:21,201 tesseract_olap.schema.xml - DEBUG:Parsing node <Schema name='tesseract-api' />
+2024-09-13 15:52:21,201 tesseract_olap.schema.xml - DEBUG:Parsing node <Cube name='Gini' />
+2024-09-13 15:52:21,201 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='gini' />
+2024-09-13 15:52:21,201 tesseract_olap.schema.xml - DEBUG:Parsing node <Dimension name='Exporter' />
+2024-09-13 15:52:21,201 tesseract_olap.schema.xml - DEBUG:Parsing node <Hierarchy name='Country' />
+2024-09-13 15:52:21,201 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Continent' />
+2024-09-13 15:52:21,201 tesseract_olap.schema.xml - DEBUG:Parsing node <Level name='Exporter' />
+2024-09-13 15:52:21,201 tesseract_olap.schema.xml - DEBUG:Parsing node <Table name='dim_country' />
+2024-09-13 15:52:21,201 tesseract_olap.schema.xml - DEBUG:Parsing node <Measure name='Gini Index' />
+2024-09-13 15:52:21,203 logiclayer - DEBUG:Module added on path /tesseract: TesseractModule
+2024-09-13 15:52:21,203 logiclayer - DEBUG:Check added: healthcheck
+2024-09-13 15:52:21,273 logiclayer - DEBUG:Module added on path /complexity: EconomicComplexityModule
+2024-09-13 15:52:21,478 logiclayer - DEBUG:Static folder added on path %s
+2024-09-13 15:52:21,478 logiclayer - DEBUG:Route added on path /: route_index
+2024-09-13 15:52:28,279 clickhouse_driver.connection - DEBUG:Connecting. Database: api. User: default
+2024-09-13 15:52:28,279 clickhouse_driver.connection - DEBUG:Connecting to amtv757tq1.us-east-1.aws.clickhouse.cloud:9440
+2024-09-13 15:52:28,827 clickhouse_driver.connection - DEBUG:Connected to ClickHouse server version 24.6.1, revision: 54468
+2024-09-13 15:52:28,828 clickhouse_driver.connection - DEBUG:Query: SELECT SUM("tcore"."ms_2063c160") AS "Trade Value","tcore"."lv_24641d6d" AS "Year" FROM (SELECT "tfact"."value" AS "ms_2063c160","tfact"."year" AS "lv_24641d6d" FROM "trade_i_baci_a_96" AS "tfact") AS "tcore" GROUP BY "tcore"."lv_24641d6d" ORDER BY "tcore"."lv_24641d6d" ASC
+2024-09-13 15:52:28,829 clickhouse_driver.connection - DEBUG:Block "" send time: 0.000161
+2024-09-13 15:52:29,077 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:52:29,077 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:52:29,079 tzlocal - DEBUG:/etc/localtime found
+2024-09-13 15:52:29,084 tzlocal - DEBUG:1 found:
+ {'/etc/localtime is a symlink to': 'America/Santiago'}
+2024-09-13 15:52:29,085 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:52:29,085 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:52:29,085 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:52:29,085 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:52:29,114 clickhouse_driver.streams.native - DEBUG:Reading column Trade Value
+2024-09-13 15:52:29,115 clickhouse_driver.streams.native - DEBUG:Reading column Year
+2024-09-13 15:52:29,218 clickhouse_driver.streams.native - DEBUG:Reading column host_name
+2024-09-13 15:52:29,218 clickhouse_driver.streams.native - DEBUG:Reading column current_time
+2024-09-13 15:52:29,219 clickhouse_driver.streams.native - DEBUG:Reading column thread_id
+2024-09-13 15:52:29,219 clickhouse_driver.streams.native - DEBUG:Reading column type
+2024-09-13 15:52:29,220 clickhouse_driver.streams.native - DEBUG:Reading column name
+2024-09-13 15:52:29,220 clickhouse_driver.streams.native - DEBUG:Reading column value
+2024-09-13 15:52:29,225 tesseract_olap.backend.clickhouse - DEBUG:Cache: LfuProvider MISS 64102797bdb3aef920905f8e696a3f96
+2024-09-13 15:52:30,975 tesseract_olap.backend.clickhouse - DEBUG:Cache: LfuProvider HIT 64102797bdb3aef920905f8e696a3f96
+2024-09-13 15:52:32,745 tesseract_olap.backend.clickhouse - DEBUG:Cache: LfuProvider HIT 64102797bdb3aef920905f8e696a3f96
