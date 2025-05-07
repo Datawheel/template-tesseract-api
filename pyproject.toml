@@ -1,27 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
-name = "tesseract-app"
+name = "logiclayer-app"
 version = "0.1.0"
-description = ""
-requires-python = ">=3.10"
-dependencies = [
-  "granian>=1.6.0",
-  "logiclayer-complexity>=0.5.5",
-  "logiclayer>=0.4.0",
-  "tesseract-olap[clickhouse,redis]>=0.10.3",
-]
+description = "A LogicLayer-based webapp."
+requires-python = ">=3.12"
+dynamic = ["classifiers"]
+readme = "README.md"
 authors = [
   {name = "Francisco Abarzua", email = "francisco@datawheel.us"},
   {name = "Samuel Osorio", email = "samuel@datawheel.us"},
 ]
+license = { text = "Proprietary" }
+dependencies = [
+    "asgi-correlation-id>=4.3.4",
+    "logiclayer>=0.4.4",
+    "logiclayer-complexity>=0.6.13",
+    "tesseract-olap[clickhouse]>=0.18.8",
+    "uvicorn>=0.34.2",
+]
+
+[dependency-groups]
+dev = [
+    "uvicorn[standard]>=0.34.2",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/project"]
 
 [tool.pyright]
+pythonVersion = "3.12"
 venvPath = "."
 venv = ".venv"
-pythonVersion = "3.10"
-
-[tool.uv]
-dev-dependencies = [
-  "granian[reload]>=1.6.0",
-  "python-dotenv[cli]>=1.0.1",
-  "pytest>=8.3.3",
-]

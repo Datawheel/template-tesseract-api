@@ -1,13 +1,18 @@
-import logging.config
+import logging
 import os
+from pathlib import Path
 
-from fastapi.responses import RedirectResponse
+from asgi_correlation_id import CorrelationIdMiddleware
+from fastapi.responses import PlainTextResponse, RedirectResponse, Response
 from logiclayer import LogicLayer
 from logiclayer_complexity import EconomicComplexityModule
 from tesseract_olap import OlapServer
 from tesseract_olap.logiclayer import TesseractModule
 
-from server.debug import DebugModule
+import project
+from project.logging import RequestUrlMiddleware
+
+logger = logging.getLogger(__name__)
 
 # PARAMETERS ===================================================================
 
@@ -15,42 +20,75 @@ from server.debug import DebugModule
 olap_backend = os.environ["TESSERACT_BACKEND"]
 
 # These parameters are optional
-olap_schema = os.environ.get("TESSERACT_SCHEMA", "etc/schema")
+olap_schema = os.environ.get("TESSERACT_SCHEMA", "/app/etc/schema")
 olap_cache = os.environ.get("TESSERACT_CACHE", "")
 app_debug = os.environ.get("TESSERACT_DEBUG", None)
-log_filepath = os.environ.get("TESSERACT_LOGGING_CONFIG", "etc/logging.ini")
 
 app_debug = bool(app_debug)
 
 
-# LOGGING ======================================================================
-# To learn how logging works in python
-# - https://docs.python.org/3.7/howto/logging.html
-# To learn about best practices and the logging.ini file
-# - https://www.datadoghq.com/blog/python-logging-best-practices/
-# - https://guicommits.com/how-to-log-in-python-like-a-pro/
+# LogicLayer modules ===========================================================
+layer = LogicLayer(
+    debug=app_debug,
+    title=project.__title__,
+    terms_of_service="https://oec.world/en/resources/terms",
+    contact={
+        "name": "Support Center",
+        "email": "support@oec.world",
+    },
+)
 
-logging.config.fileConfig(log_filepath, disable_existing_loggers=False)
-
-
-# ASGI app =====================================================================
 olap = OlapServer(backend=olap_backend, schema=olap_schema, cache=olap_cache)
 
-mod_tsrc = TesseractModule(olap, debug=app_debug)
+mod_tesseract = TesseractModule(olap, debug=app_debug)
+layer.add_module("/tesseract", mod_tesseract)
 
-mod_cmplx = EconomicComplexityModule(olap, debug=app_debug)
+mod_ecomplexity = EconomicComplexityModule(olap, debug=app_debug)
+layer.add_module("/complexity", mod_ecomplexity)
 
-layer = LogicLayer(debug=app_debug)
+dir_explorer = Path("./etc/explorer/").resolve()
+if not os.access(dir_explorer, os.R_OK):
+    msg = f"Can't access DataExplorer at {dir_explorer}"
+    raise OSError(msg)
+layer.add_static("/ui", dir_explorer, html=True)
 
-if app_debug:
-    mod_debug = DebugModule()
-    layer.add_module("/debug", mod_debug)
+# ASGI Middlewares =============================================================
 
-layer.add_module("/tesseract", mod_tsrc)
-layer.add_module("/complexity", mod_cmplx)
-layer.add_static("/ui", "./etc/static/", html=True)
+# Adds the persistent Request ID to trace request logs
+layer.app.add_middleware(CorrelationIdMiddleware)
+
+# Adds the Request URL to avoid storing uvicorn.access
+layer.app.add_middleware(RequestUrlMiddleware)
+
+# Adds CORS handling
+# layer.app.add_middleware(
+#    CORSMiddleware,
+#    allow_origins=["*"] if app_debug else [],
+#    allow_origin_regex=r"https://.*\.oec\.world",
+#    allow_credentials=True,
+#    allow_methods=["GET", "POST"],
+#    allow_headers=["*"],
+#    expose_headers=[
+#        "X-Tesseract-Columns",
+#        "X-Tesseract-QueryRows",
+#        "X-Tesseract-TotalRows",
+#    ],
+#    max_age=1800,
+# )
+
+# Extra individual routes ======================================================
 
 
 @layer.route("/", response_class=RedirectResponse, status_code=302)
-def route_index():
+def route_index() -> str:
+    """Define a redirection of the domain root to the Tesseract UI static page."""
     return "/ui/"
+
+
+@layer.route("/robots.txt", include_in_schema=False)
+def route_robots() -> Response:
+    """Define the robots.txt directive for the root."""
+    return PlainTextResponse("User-agent: *\nDisallow: /\n")
+
+
+logger.info("App is ready to accept connections")

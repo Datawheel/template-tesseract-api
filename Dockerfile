@@ -1,8 +1,9 @@
-FROM ubuntu:mantic as builder
+#syntax=docker/dockerfile:1.4
 
-# To use python3.10, switch to ubuntu:jammy
+FROM ubuntu:noble as builder
 
 RUN <<EOT
+set -ex
 apt-get update -qy
 apt-get install -qyy \
     -o APT::Install-Recommends=false \
@@ -25,15 +26,17 @@ COPY pyproject.toml /_lock/
 COPY uv.lock /_lock/
 
 RUN --mount=type=cache,target=/root/.cache <<EOT
+set -ex
 cd /_lock
 uv sync \
-    --frozen \
+    --locked \
     --no-dev \
     --no-install-project
 EOT
 
 COPY . /src
 RUN --mount=type=cache,target=/root/.cache <<EOT
+set -ex
 uv pip install \
     --python=$UV_PROJECT_ENVIRONMENT \
     --no-deps \
@@ -49,6 +52,7 @@ ENV PATH=/app/bin:$PATH
 
 # Create the runtime user and group
 RUN <<EOT
+set -ex
 groupadd -r tesseract
 useradd --system --home /app --gid tesseract --no-user-group tesseract
 EOT
@@ -60,6 +64,7 @@ STOPSIGNAL SIGINT
 
 # Update OS packages, then clear APT cache and lists
 RUN <<EOT
+set -ex
 apt-get update -qy
 apt-get install -qyy \
     -o APT::Install-Recommends=false \
@@ -69,18 +74,18 @@ apt-get install -qyy \
     python3.12 \
     libpython3.12 \
     libpcre3 \
-    libxml2
+    libxml2 \
+    curl
 
 apt-get clean
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 EOT
 
 # Copy runtime files
-COPY docker-entrypoint.sh /
-COPY etc /app/etc
-
+COPY --chmod=755 docker-entrypoint.sh /
 COPY --from=builder --chown=tesseract:tesseract /app /app
 COPY --chown=tesseract:tesseract ./app.py /app/app.py
+COPY --chown=tesseract:tesseract ./etc /app/etc
 
 # Replace runtime user and cwd
 USER tesseract
@@ -88,10 +93,17 @@ WORKDIR /app
 
 # Tests to ensure correct configuration and permissions
 RUN <<EOT
+set -ex
+# Print python version
 python -V
+# Print sys.path, https://docs.python.org/3/library/site.html#command-line-interface
 python -Im site
-python -Ic 'import server'
-ls -l /docker-entrypoint.sh
-ls -la /app
-ls -l /app/etc
+# Ensure folders have correct permissions
+python -Ic 'import os; assert os.access("/docker-entrypoint.sh", os.X_OK)'
+python -Ic 'import os; assert os.access("/app", os.W_OK)'
+python -Ic 'import os; assert os.access("/app/lib", os.R_OK)'
+python -Ic 'import os; assert os.access("/app/etc", os.R_OK)'
+python -Ic 'import project'
+# Print dependency folder size
+echo "The dependency folder is $(du -sh /app/lib | awk '{print $1}')"
 EOT
